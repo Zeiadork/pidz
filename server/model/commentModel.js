@@ -66,7 +66,7 @@ class Comment {
         const dataToSave = JSON.stringify(commentData);
 
         //use fs.writeFile, specify location to save, what to save, and error handling.
-        fs.writeFile('../server/data/commentJSONData.txt', dataToSave, err =>
+        fs.writeFile('../data/commentJSONData.txt', dataToSave, err =>
         {
             if (err)
             {
@@ -88,7 +88,7 @@ class Comment {
         let parsedData;
 
         //read data from file, location, format, error and data handling
-        fs.readFile('../server/data/commentJSONData.txt', 'utf-8', (err, data) =>
+        fs.readFile('../data/commentJSONData.txt', 'utf-8', (err, data) =>
         {
             //if we got error rather than data - log it
             if(err)
