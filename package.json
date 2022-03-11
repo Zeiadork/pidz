@@ -5,10 +5,12 @@
     "express": "^4.17.3"
   },
   "scripts": {
+     "heroku-prebuild": "npm install -f",
     "start": "node server.js",
     "test": "jest --watch --silent",
     "coverage": "jest --coverage",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "heroku-postbuild": "npm run build"
   },
   "name": "server",
   "version": "1.0.0",
