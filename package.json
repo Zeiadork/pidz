@@ -1,5 +1,27 @@
 {
   "dependencies": {
-    "xmlhttprequest": "^1.8.0"
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  },
+  "scripts": {
+     "heroku-prebuild": "npm install -f",
+    "start": "node server.js",
+    "test": "jest --watch --silent",
+    "coverage": "jest --coverage",
+    "dev": "nodemon server.js",
+    "heroku-postbuild": "npm run build"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }
