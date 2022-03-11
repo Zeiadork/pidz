@@ -56,7 +56,7 @@ class Journal {
         const dataToSave = JSON.stringify(journalData);
     
         // use fs.writeFile, specify directory, what to save, and error handling.
-        fs.writeFile('../server/data/journalJSONData.txt', dataToSave, err =>
+        fs.writeFile('./data/journalJSONData.txt', dataToSave, err =>
             {
                 if (err)
                 {
@@ -77,7 +77,7 @@ class Journal {
         let parsedData;
 
         //read data from file, location, format, error and data handling
-        fs.readFile('../server/data/journalJSONData.txt', 'utf-8', (err, data) =>
+        fs.readFile('./data/journalJSONData.txt', 'utf-8', (err, data) =>
         {
             //if we got error rather than data - log it
             if(err)
